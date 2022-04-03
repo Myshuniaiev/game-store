@@ -1,0 +1,42 @@
+<div class="navigation">
+  <div class="navigation-container">
+    <img
+      src="../../../assets/images/logo.png"
+      alt="game-logo"
+      class="navigation-logo"
+      routerLink="/"
+    />
+    <ul class="navigation-links">
+      <li class="navigation-link">Dashboard</li>
+      <li class="navigation-link">Suggestions</li>
+      <li class="navigation-link">All</li>
+      <li class="navigation-link">Logout</li>
+    </ul>
+  </div>
+  <div class="navigation-search">
+    <div class="navigation-additional">
+      <h1 class="navigation-title">Game store</h1>
+      <p class="navigation-description">
+        On this website you can find out more about the games you've played
+        before or find new games you've never played before. Happy searching!
+      </p>
+    </div>
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <button class="search-button-icon">
+        <img
+          src="../../../assets/images/search-icon.png"
+          class="search-icon"
+          alt="search-icon"
+        />
+      </button>
+      <input
+        type="text"
+        name="Search"
+        ngModel
+        class="navigation-input"
+        placeholder="Search favorite games"
+      />
+      <button class="search-button-text">Search</button>
+    </form>
+  </div>
+</div>
